@@ -1,0 +1,218 @@
+[{
+    "name": "left_bar",
+    "layer": "bottom",
+    "position": "left",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "fixed-center": true,
+    "gtk-layer-shell": true,
+    "width": 30,
+    "spacing": 1,
+    "name":"general-left",
+    "reload_style_on_change": true,
+    "modules-left": [
+        "custom/launch_rofi",
+	"hyprland/workspaces"
+/*	"hyprland/window"*/
+	],
+    "modules-center": [  
+    "group/performance",
+    ],
+    "modules-right": [
+        "custom/power_profile",
+/*        "backlight",*/
+	"group/audio",
+	"battery",
+	"custom/updates",
+	"tray",
+/*	"custom/weather",*/
+        "custom/light_dark",
+	"group/power"
+    ],
+
+    "include": [
+        "~/.config/HyprV/waybar/conf/mesu.jsonc",
+        "~/.config/HyprV/waybar/conf/asus-rog.jsonc",
+        "~/.config/HyprV/waybar/conf/hyprv-util.jsonc"
+    ],
+
+"group/performance":{
+	"orientation":"vertical",
+    "modules":["custom/performance","cpu","memory","disk","temperature"]
+    },
+
+
+    
+    "hyprland/window": {
+        "format": {},
+    },
+
+    "hyprland/workspaces": {
+    },
+    "custom/performance":{
+        "format":"≋"
+    },
+    "group/power":{
+	"orientation":"vertical",
+	"modules":["custom/power_btn","custom/lock_screen","custom/updates"]
+    },
+    "group/audio":{
+	"orientation":"vertical",
+	"modules":["pulseaudio", "pulseaudio#microphone"]
+    },
+    "group/performance":{
+	"orientation":"vertical",
+	"drawer":{},
+        "modules":["custom/performance","cpu","memory","disk","temperature"]
+    },
+    "custom/launch_rofi": {
+        "format": "🐨",
+        "on-click": "sh -c '(sleep 0.5s; rofi -show window)' & disown",
+        "tooltip": false
+    },
+    "custom/lock_screen": {
+        "format": "",
+        "on-click": "sh -c '(sleep 0.5s; swaylock)' & disown",
+        "tooltip": false
+    },
+
+    "custom/power_btn": {
+        "format": "",
+        "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
+        "tooltip": false
+    },
+
+
+    "clock": {
+	"format":"{:%H:%M %Y-%m-%d}",
+        "interval":60
+    },
+
+    "cpu": {
+        "interval": 10,
+        "format": " {usage}%",
+        "max-length": 10,
+        "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+    },
+
+    "disk": {
+        "interval": 10,
+        "format": "󰋊 {percentage_used}%",
+        "path": "/",
+        "tooltip": true,
+        "tooltip-format": "HDD - {used} used out of {total} on {path} ({percentage_used}%)",
+        "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": " {}%",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": "Memory - {used:0.1f}GB used",
+        "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+    },
+
+    "custom/updates": {
+        "format": "{}",
+        "exec": "~/.config/HyprV/waybar/scripts/update-sys",
+        "on-click": "~/.config/HyprV/waybar/scripts/update-sys update",
+        "interval": 300,
+        "tooltip": true
+    },
+
+    "wlr/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        }
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-scroll-up": "~/.config/HyprV/waybar/scripts/brightness --inc",
+        "on-scroll-down": "~/.config/HyprV/waybar/scripts/brightness --dec",
+        "min-length": 6
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "on-click": "~/.config/HyprV/waybar/scripts/volume --toggle",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "~/.config/HyprV/waybar/scripts/volume --inc",
+        "on-scroll-down": "~/.config/HyprV/waybar/scripts/volume --dec",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "on-click": "~/.config/HyprV/waybar/scripts/volume --toggle-mic",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "~/.config/HyprV/waybar/scripts/volume --mic-inc",
+        "on-scroll-down": "~/.config/HyprV/waybar/scripts/volume --mic-dec",
+        "scroll-step": 5
+    }
+},
+{
+    "name": "top_bar",
+    "layer": "top",
+    "position": "top",
+    "height": 15,
+    "modules-left":["group/peformance"],
+    "modules-center":["hyprland/window"],
+    "modules-right": ["clock"],
+    
+    "group/performance":{
+	"orientation":"vertical",
+	"drawer":{},
+        "modules":["custom/performance","cpu","memory","disk","temperature"]
+    },
+    "custom/performance":{
+        "format":"yyyyyyyyyyyyyyyyyy≋"
+    }
+
+
+}]
