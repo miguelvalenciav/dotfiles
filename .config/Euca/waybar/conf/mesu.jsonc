@@ -8,8 +8,8 @@
         //shows the current weather and forecast
         "tooltip" : true,
         "format" : "{}",
-        "interval" : 30,
-        "exec" : "~/.config/HyprV/waybar/scripts/waybar-wttr.py",
+        "interval" : 60,
+        "exec" : "~/dotfiles/.config/Euca/waybar/scripts/waybar-wttr.py",
         "return-type" : "json"
     },
 

@@ -34,9 +34,9 @@
     ],
 
     "include": [
-        "~/dotfiles/.config/waybar/conf/mesu.jsonc",
-        "~/dotfiles/.config/waybar/conf/asus-rog.jsonc",
-        "~/dotfiles/.config/waybar/conf/hyprv-util.jsonc"
+        "~/dotfiles/.config/Euca/waybar/conf/mesu.jsonc", /*Contiene Hora y Clima*/
+        "~/dotfiles/.config/Euca/waybar/conf/asus-rog.jsonc",
+        "~/dotfiles/.config/Euca/waybar/conf/hypr-util.jsonc"
     ],
 
     "hyprland/window": {

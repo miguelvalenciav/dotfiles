@@ -1,5 +1,5 @@
 #!/bin/bash
-. ~/.config/HyprV/hyprv.conf
+. ~/dotfiles/.config/Euca/euca.conf
 
 get_theme() {
     # Check which waybar theme is set
@@ -53,9 +53,11 @@ set_current_background() {
     if [[ ! -z "$SET_BG" ]]; then
         #set the current background
         if [[ $THEMEIS == "dark.css" ]]; then
-            swww img ~/.config/HyprV/backgrounds/$VER'-background-dark.jpg'
+            #swww img ~/.config/HyprV/backgrounds/$VER'-background-dark.jpg'
+            swww img ~/Images/Wallpapers/popocatepetl.jpg
         else
-            swww img ~/.config/HyprV/backgrounds/$VER'-background.jpg'
+            swww img ~/Images/Wallpapers/popocatepetl.jpg
+
         fi
     else
         swww img $SET_BG

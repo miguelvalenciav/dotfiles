@@ -1,14 +1,14 @@
 #!/bin/bash
 
 get_pwr() {
-    PWR=$(asusctl profile -p | sed s:'Active profile is'::)
+    PWR=$(upower -i $(power -e) | grep BAT) | grep "state" | sed s:'Battery is'::
 }
 
 get_pwr
 
-if [ $PWR == Balanced ]; then
+if [ $PWR == discharging ]; then
     text="󰾅"
-    tooltip="Balanced"
+    tooltip="Discharging"
 elif [ $PWR == Performance ]; then
     text="󰓅"
     tooltip="Performance"

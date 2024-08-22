@@ -8,4 +8,5 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias nano='nano -l'
+alias waybar= ''
 PS1='[\u@\h \W]\$ '
