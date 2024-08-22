@@ -34,9 +34,9 @@
     ],
 
     "include": [
-        "~/dotfiles/.config/HyprV/waybar/conf/mesu.jsonc",
-        "~/dotfiles/.config/HyprV/waybar/conf/asus-rog.jsonc",
-        "~/dotfiles/.config/HyprV/waybar/conf/hyprv-util.jsonc"
+        "~/dotfiles/.config/waybar/conf/mesu.jsonc",
+        "~/dotfiles/.config/waybar/conf/asus-rog.jsonc",
+        "~/dotfiles/.config/waybar/conf/hyprv-util.jsonc"
     ],
 
     "hyprland/window": {
