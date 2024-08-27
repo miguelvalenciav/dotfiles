@@ -1,0 +1,6 @@
+ChatGPT\x00icon\x1ffirefox
+Firefox\x00icon\x1ffirefox
+Terminal\x00icon\x1fterminal
+Redash\x00icon\x1ffirefox
+Obsidian\x00icon\x1fobsidian
+Other\x00icon\x1ffirefox

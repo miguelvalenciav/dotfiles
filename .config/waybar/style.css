@@ -1,21 +1,25 @@
 * {
     border: none;
     border-radius: 10px;
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "Avenir-Medium";
     font-weight: normal;
-    font-size: 14px;
+    font-size: 15px;
 }
+
+.left-bar { 
+    color:#bbe4ff;
+  } 
 
 window#waybar {
     background: transparent;
     /*color: #f6f7fc;*/
     /*color: #c8d9f5;*/
-    color: #fff;
+    color: #bbe4ff;
 }
 
 tooltip {
-    background: #5c5d70;
-    opacity: 1;
+    background: #0F49DB;
+    opacity: 0.75;
     border-radius: 5px;
     border-width: 1px;
     border-style: solid;
@@ -23,21 +27,22 @@ tooltip {
 }
 
 tooltip label{
-    color: #b182c7;
+    color: #bbe4ff;
 }
 
 #workspaces button {
-    color: #c7bdcc;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 #workspaces button.active {
     color: #000000;
-    background: #b182c7;
+    background: #0f8adb;
     border-radius: 5px;
 }
 
 #workspaces button:hover {
-    background: #821ab3;
+    background: #5d58db;
     color: #cdd6f4;
     border-radius: 5px;
 }
@@ -63,11 +68,11 @@ tooltip label{
 #temperature,
 #workspaces,
 #backlight {
-    background: #1e1e2e;
+    background: #0F49DB;
     opacity: 0.8;
-    padding: 0px 0px;
-    margin: 0px 0px;
-    border: 0px;
+    padding: 3px 10px 3px 10px;
+    margin: 2px 2px;
+    border: 1px;
 }
 
 #temperature.critical {

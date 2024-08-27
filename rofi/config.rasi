@@ -1,14 +1,15 @@
 configuration {
-	modes: "window,drun,run,ssh";
-	combi-modes: [ window, drun, run ];
-	font: "mono 12";
-	location: 0;
-    show-icons: true;
+  modes: "run,ssh";
+	font: "Avenir-Medium 14";
+  cycle: true;
+  show-icons:true;
+	terminal: "kitty";
+
+/*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
-	
-/*	terminal: "rofi-sensible-terminal";*/
+
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
 /*	run-command: "{cmd}";*/
@@ -16,7 +17,6 @@ configuration {
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
 /*	window-match-fields: "all";*/
-	icon-theme: ;
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-show-actions: false;*/
@@ -24,11 +24,11 @@ configuration {
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
-	sort: true;
+/*	sort: false;*/
 /*	sorting-method: "normal";*/
 /*	case-sensitive: false;*/
-	cycle: true;
-	sidebar-mode: true;
+/*	cycle: true;*/
+/*	sidebar-mode: true;*/
 /*	hover-select: false;*/
 /*	eh: 1;*/
 /*	auto-select: false;*/
@@ -44,33 +44,30 @@ configuration {
 /*	scroll-method: 0;*/
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
-/*	global-kb: false;*/
 /*	max-history-size: 25;*/
 /*	combi-hide-mode-prefix: false;*/
 /*	combi-display-format: "{mode} {text}";*/
 /*	matching-negate-char: '-' /* unsupported */;*/
 /*	cache-dir: ;*/
-	window-thumbnail: true;
+/*	window-thumbnail: false;*/
 /*	drun-use-desktop-cache: false;*/
 /*	drun-reload-desktop-cache: false;*/
 /*	normalize-match: false;*/
 /*	steal-focus: false;*/
 /*	application-fallback-icon: ;*/
-/*	refilter-timeout-limit: 300;*/
+/*	refilter-timeout-limit: 8192;*/
 /*	xserver-i300-workaround: false;*/
-/*	completer-mode: "recursivebrowser";*/
 /*	pid: "/run/user/1000/rofi.pid";*/
 /*	display-window: ;*/
+/*	display-windowcd: ;*/
 /*	display-run: ;*/
 /*	display-ssh: ;*/
 /*	display-drun: ;*/
 /*	display-combi: ;*/
 /*	display-keys: ;*/
 /*	display-filebrowser: ;*/
-/*	display-recursivebrowser: ;*/
 /*	kb-primary-paste: "Control+V,Shift+Insert";*/
 /*	kb-secondary-paste: "Control+v,Insert";*/
-/*	kb-secondary-copy: "Control+c";*/
 /*	kb-clear-line: "Control+w";*/
 /*	kb-move-front: "Control+a";*/
 /*	kb-move-end: "Control+e";*/
@@ -138,11 +135,8 @@ configuration {
 /*	kb-select-8: "Super+8";*/
 /*	kb-select-9: "Super+9";*/
 /*	kb-select-10: "Super+0";*/
-/*	kb-entry-history-up: "Control+Up";*/
-/*	kb-entry-history-down: "Control+Down";*/
 /*	ml-row-left: "ScrollLeft";*/
-/*	ml-row-right: "
-ScrollRight";*/
+/*	ml-row-right: "ScrollRight";*/
 /*	ml-row-up: "ScrollUp";*/
 /*	ml-row-down: "ScrollDown";*/
 /*	me-select-entry: "MousePrimary";*/
@@ -156,23 +150,4 @@ ScrollRight";*/
       directories-first: true;
       sorting-method:    "name";
   }
-}
-
-//@theme "/usr/share/rofi/themes/purple.rasi"
-
-@theme "/usr/share/rofi/themes/material.rasi"
-
-entry {
-    placeholder: "Search app / window";
-    cursor: pointer;
-}
-
-element {
-    orientation: horizontal;
-    children: [ element-icon, element-text ];
-    spacing: 10px;
-}
-
-entry, element-text {
-    text-color: #ffffff;
 }

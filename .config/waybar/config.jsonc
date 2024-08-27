@@ -1,36 +1,55 @@
+[
+    /*LEFT BAR*/
 {
-    "layer": "top",
-    "position": "top",
-    "mod": "dock",
-    "exclusive": true,
-    "passthrough": false,
-    "gtk-layer-shell": true,
-    "height": 50,
-    "modules-left": [
-        "custom/launch_wofi",
-        "wlr/workspaces",
-        "cpu",
-        "memory",
-        "disk",
-        "hyprland/window"
+    "name":"left-bar",
+    "layer":"botttom",
+    "position":"left",
+    "width": 25,
+    "margin-top": 35,
+    /*Modules for left bar*/    
+    "modules-left": [    
+        "hyprland/workspaces",
     ],
     "modules-center": [
         "custom/lock_screen",
         "custom/updates",
-        "clock",
         "custom/power_btn"
+    ]
+},
+/*TOP BAR*/
+{
+    "name":"top-bar",
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+/*    "gtk-layer-shell": true,*/
+    
+
+    /*Modules for top bar*/
+    "modules-left": [
+        "custom/koa_exec",
+        /*"custom/launch_wofi",*/
+        "cpu",
+        "memory",
+        "disk"
+    ],
+    "modules-center": [
+        "hyprland/window",
     ],
     "modules-right": [
+        "pulseaudio",
         "temperature",
         "custom/power_profile",
         "battery",
         "backlight",
-        "pulseaudio",
-        "pulseaudio#microphone",
         "tray",
         "custom/weather",
         "custom/myhyprv",
-        "custom/light_dark"
+        "custom/light_dark",
+        "clock"
     ],
 
     "include": [
@@ -48,6 +67,15 @@
         "on-click": "sh -c '(sleep 0.5s; wofi)' & disown",
         "tooltip": false
     },
+
+    "pulseaudio": {
+    "format": "{volume}% ",
+    "format-muted": "Muted ﱝ",
+    "on-click": "pavucontrol",
+    /*"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    */},
+
 
     "custom/lock_screen": {
         "format": "",
@@ -139,7 +167,7 @@
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
-    "pulseaudio": {
+    "pulseaudio_old": {
         "format": "{icon} {volume}%",
         "format-muted": "",
         "on-click": "~/dotfiles/.config/HyprV/waybar/scripts/volume --toggle",
@@ -169,3 +197,4 @@
         "scroll-step": 5
     }
 }
+]
