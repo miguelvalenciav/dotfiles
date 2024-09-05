@@ -1,0 +1,48 @@
+conda create --name unsloth_env \
+    python=3.10 \
+    pytorch-cuda=12.4 \
+    pytorch cudatoolkit xformers -c pytorch -c nvidia -c xformers \
+    -y
+conda activate unsloth_env
+
+pip install "unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git"
+
+pip install --no-deps "trl<0.9.0" peft accelerate bitsandbytes
+
+python script1.py 
+
+model = FastLanguageModel.get_peft_model(
+    model,
+    r = 16, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
+    target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
+                      "gate_proj", "up_proj", "down_proj",],
+    lora_alpha = 16,
+    lora_dropout = 0, # Supports any, but = 0 is optimized
+    bias = "none",    # Supports any, but = "none" is optimized
+    # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
+    use_gradient_checkpointing = "unsloth", # True or "unsloth" for very long context
+    random_state = 3407,
+    use_rslora = False,  # We support rank stabilized LoRA
+    loftq_config = None, # And LoftQ
+)
+
+
+
+
+
+
+
+0 model = FastLanguageModel.get_peft_model(
+21     model,
+22     r = 16, # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
+23     target_modules = ["q_proj", "k_proj", "v_proj", "o_proj",
+24                       "gate_proj", "up_proj", "down_proj",],
+25     lora_alpha = 16,
+26     lora_dropout = 0, # Supports any, but = 0 is optimized
+27     bias = "none",    # Supports any, but = "none" is optimized
+28     # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
+29     use_gradient_checkpointing = "unsloth", # True or "unsloth" for very long context
+30     random_state = 3407,
+31     use_rslora = False,  # We support rank stabilized LoRA
+32     loftq_config = None, # And LoftQ
+33 )

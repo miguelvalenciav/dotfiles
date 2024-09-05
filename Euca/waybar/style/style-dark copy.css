@@ -1,0 +1,112 @@
+* {
+    border: none;
+    border-radius: 10px;
+    font-family: "Avenir-Medium";
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.left-bar { 
+    color:#bbe4ff;
+  } 
+
+window#waybar {
+    background: transparent;
+    /*color: #f6f7fc;*/
+    /*color: #c8d9f5;*/
+    color: #bbe4ff;
+}
+
+tooltip {
+    background: #0F49DB;
+    opacity: 0.75;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #34344b;
+}
+
+tooltip label{
+    color: #bbe4ff;
+}
+
+#workspaces button {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#workspaces button.active {
+    color: #000000;
+    background: #0f8adb;
+    border-radius: 5px;
+}
+
+#workspaces button:hover {
+    background: #5d58db;
+    color: #cdd6f4;
+    border-radius: 5px;
+}
+
+#custom-launch_rofi,
+#custom-lock_screen,
+#custom-light_dark,
+#custom-power_btn,
+#custom-power_profile,
+#custom-weather,
+#custom-myhyprv,
+#custom-performance,
+#window,
+#cpu,
+#disk,
+#custom-updates,
+#memory,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#tray,
+#temperature,
+#workspaces,
+#backlight {
+    background: #0F49DB;
+    opacity: 0.8;
+    padding: 3px 10px 3px 10px;
+    margin: 2px 2px;
+    border: 1px;
+}
+
+#temperature.critical {
+    color: #e92d4d;
+}
+
+
+#workspaces {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+#window {
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#custom-launch_firefox, 
+#custom-launch_thunderbird,
+#custom-launch_thunar,
+#custom-launch_kitty,
+#custom-weather {
+    margin-left: 0px;
+    border-right: 0px;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+#custom-launch_rofi {
+    font-size: 25px;
+}
+
+#custom-launch_firefox, 
+#custom-launch_kitty {
+    font-size: 20px;
+}

@@ -1,24 +1,4 @@
 #!/bin/bash
-
-# Lee el archivo y pasa las opciones a Rofi
-options=$(cat ~/dotfiles/rofi/custom_entry_list.txt | rofi -dmenu -p "Selecciona una opción" -config ~/dotfiles/rofi/config.rasi)
-
-# Limpia la opción seleccionada para eliminar los caracteres especiales de icono
-selected_option=$(echo "$options" | sed 's/\\x00icon\\x1f.*//')
-
-# Ejecuta la aplicación basada en la opción seleccionada
-case "$selected_option" in
-    "ChatGPT")   
-        firefox --name "chatgpt" --new-window chatgpt.com &
-        ;;
-    "Redash") 
-        firefox --name "redash" --new-window redashairtm.xyz &        
-        ;;
-    "Terminal")
-        kitty
-        ;;
-    *)
-        # Muestra el menú drun por defecto de Rofi
-        rofi -config ~/dotfiles/rofi/config.rasi -show drun
-        ;;
+    rofi -config ~/dotfiles/rofi/config.rasi -show drun
+    ;;
 esac

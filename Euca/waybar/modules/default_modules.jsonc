@@ -1,0 +1,57 @@
+{
+"custom/koa_exec": {
+    "format": "",
+    "on-click": "~/dotfiles/scripts/bash/rofi_launch_app",
+    "tooltip": false
+},
+"custom/light_dark": {
+    "format": "󰐾",
+    "on-click": "~/dotfiles/Euca/waybar/scripts/baraction light",
+    "tooltip": false
+},
+"tray": {
+    "icon-size": 25,
+    "spacing": 10
+},
+"custom/lock_screen": {
+    "format": "",
+    "on-click": "hyprlock & disown",
+    "tooltip": false
+},
+"custom/updates": {
+    "format": "{}",
+    "exec": "~/dotfiles/Euca/waybar/scripts/update-sys",
+    "on-click": "~/dotfiles/Euca/waybar/scripts/update-sys update",
+    "interval": 600,
+    "tooltip": true
+},
+"custom/power_btn": {
+    "format": "",
+    "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
+    "tooltip": false
+},
+
+"clock": {
+    "format": "{:%Y-%m-%d - %H:%M}",
+    "tooltip-format": "{: %A, %e %B %Y}"
+},
+
+"custom/weather": {
+    //shows the current weather and forecast
+    "tooltip" : true,
+    "format" : "{}",
+    "interval" : 30,
+    "exec" : "~/dotfiles/Euca/waybar/scripts/waybar-wttr-c.py",
+    "return-type" : "json"
+},
+"temperature": {
+    "thermal-zone": 1,
+    "format": "",
+    "format-alt-click": "click-right",
+    "format-alt": " {temperatureC}°C",
+    "critical-threshold": 70,
+    "format-critical": " {temperatureC}°C",
+    "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+}
+
+}
