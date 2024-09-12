@@ -46,9 +46,9 @@
     ],
     "modules-right": [
         "pulseaudio",
-        "power_profiles",
+        /*"power_profiles",*/
         "temperature",
-        "custom/power_profile",
+        /*"custom/power_profile",*/
         "battery",
         "backlight",
         "custom/weather",
@@ -69,26 +69,6 @@
         "format": "{}"
     },
 
-    
-    "custom/launch_wofi": {
-        "format": "",
-        "on-click": "sh -c '(sleep 0.5s; wofi)' & disown",
-        "tooltip": false
-    },
-
-    "pulseaudio": {
-    "format": "{volume}% ",
-    "format-muted": "Muted ﱝ",
-    "on-click": "pavucontrol",
-    /*"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
-    */},
-    "cpu": {
-        "interval": 10,
-        "format": " {usage}%",
-        "max-length": 10,
-        "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
-    },
 
     "disk": {
         "interval": 30,

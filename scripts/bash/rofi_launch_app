@@ -1,4 +1,3 @@
 #!/bin/bash
-    rofi -config ~/dotfiles/rofi/config.rasi -show drun
+    rofi -config ~/dotfiles/Euca/rofi/config.rasi -show drun
     ;;
-esac

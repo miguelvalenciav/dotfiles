@@ -1,6 +1,7 @@
 {
 "custom/koa_exec": {
-    "format": "",
+    //"format": "",
+    "format": "🐨",
     "on-click": "~/dotfiles/scripts/bash/rofi_launch_app",
     "tooltip": false
 },
@@ -52,6 +53,17 @@
     "critical-threshold": 70,
     "format-critical": " {temperatureC}°C",
     "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
-}
+},
+"pulseaudio": {
+    "format": "{volume}%  ",
+    "format-muted": "Muted ﱝ",
+    "on-click": "pavucontrol"
+    },
+"cpu": {
+    "interval": 10,
+    "format": "  {usage}%",
+    "max-length": 10,
+    "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+},
 
 }
