@@ -3,52 +3,55 @@
     border-radius: 10px;
     font-family: "Avenir-Medium";
     font-weight: normal;
-    font-size: 25px;
 }
 
-.left-bar { 
-    color:#bbe4ff;
-  } 
-
-window#waybar {
+window#waybar{
     background: transparent;
-    /*color: #f6f7fc;*/
-    /*color: #c8d9f5;*/
-    color: #bbe4ff;
 }
 
-tooltip {
-    background: #0F49DB;
-    opacity: 0.75;
-    border-radius: 5px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #34344b;
+window#waybar *.module:hover{
+    color:  #615147;
 }
 
-tooltip label{
-    color: #bbe4ff;
+window#waybar.left-bar {
+    font-size: 25px;
+    color:#7C4A31;
+}
+
+window#waybar.left-bar *.module {
+    padding: 5px;
+    background-color: rgba(255, 245, 235, 0.6);
+}
+
+window#waybar.top-bar {
+    font-size: 25px;
+    color:#7C4A31;
+}
+
+window#waybar.top-bar *.module {
+    padding: 5px;
+    background-color: rgba(255, 245, 235, 0.6);
 }
 
 #workspaces button {
-    color: #ffffff;
+    color:#7C4A31;
     font-weight: bold;
 }
 
 #workspaces button.active {
-    color: #000000;
-    background: #0f8adb;
+    color: #F5E6DA;
+    background: #615147;
     border-radius: 5px;
 }
 
 #workspaces button:hover {
-    background: #5d58db;
-    color: #cdd6f4;
+    background: #B15638;
+    color: #F5E6DA;
     border-radius: 5px;
 }
 
-#custom-launch_rofi,
-#custom-lock_screen,
+/*#custom-koa_exec,*/
+/*#custom-lock_screen,
 #custom-light_dark,
 #custom-power_btn,
 #custom-power_profile,
@@ -68,23 +71,20 @@ tooltip label{
 #temperature,
 #workspaces,
 #backlight {
-    background: #0F49DB;
-    opacity: 0.8;
-    padding: 3px 10px 3px 10px;
-    margin: 2px 2px;
-    border: 1px;
-}
+    background-color: rgba(255, 245, 235, 0.6);
+    border: 0px;
+    color:#7C4A31;
 
+
+}
+*/
 #temperature.critical {
     color: #e92d4d;
 }
 
-
 #workspaces {
     padding-right: 0px;
-    padding-left: 0px;
 }
-
 #window {
     border-radius: 5px;
     margin-left: 20px;
@@ -109,4 +109,22 @@ tooltip label{
 #custom-launch_firefox, 
 #custom-launch_kitty {
     font-size: 20px;
+}
+
+tooltip {
+    background: #F5E6DA;
+    opacity: 1;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #34344b;
+    color:#7C4A31;
+}
+
+tooltip label{
+    color: #7C4A31;
+}
+
+#custom-notification {
+  font-family: "NotoSansMono Nerd Font";
 }

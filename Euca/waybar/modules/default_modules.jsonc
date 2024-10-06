@@ -5,15 +5,66 @@
     "on-click": "~/dotfiles/scripts/bash/rofi_launch_app",
     "tooltip": false
 },
+"hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "show-sepacial":true,
+    "on-click": "activate",
+    "persistent_workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+        "6": [],
+        "7": [],
+        "8": [],
+        "9": [],
+        "10": []
+    }
+},
+
+  "custom/notification": {
+    "tooltip": true,
+    "tooltip-format":"{}",
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+},
+
+"tray": {
+    "icon-size": 25,
+    "spacing": 10
+},
+
 "custom/light_dark": {
     "format": "󰐾",
     "on-click": "~/dotfiles/Euca/waybar/scripts/baraction light",
     "tooltip": false
 },
-"tray": {
-    "icon-size": 25,
-    "spacing": 10
+
+"hyprland/language": {
+    "format": "{}",
+    "format-en": "en",
+    "format-es": "es",
+    "on-click":"",
+    "interval":1
 },
+
 "custom/lock_screen": {
     "format": "",
     "on-click": "hyprlock & disown",
@@ -66,4 +117,91 @@
     "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
 },
 
+"disk": {
+    "interval": 30,
+    "format": "󰋊 {percentage_used}%",
+    "path": "/",
+    "tooltip": true,
+    "tooltip-format": "HDD - {used} used out of {total} on {path} ({percentage_used}%)",
+    "on-click": "kitty --start-as=fullscreen --title btop sh -c 'bt~/dotfiles/.config/op'"
+},
+
+"memory": {
+    "interval": 30,
+    "format": " {}%",
+    "max-length": 10,
+    "tooltip": true,
+    "tooltip-format": "Memory - {used:0.1f}GB used",
+    "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+},
+
+
+
+
+"backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "on-scroll-up": "~/dotfiles/.config/HyprV/waybar/scripts/brightness --inc",
+    "on-scroll-down": "~/dotfiles/.config/HyprV/waybar/scripts/brightness --dec",
+    "min-length": 6
+},       
+"power_profiles": {
+    "interval": 10,
+    "exec": "powerprofilesctl list",
+    "format": "{icon} {profile}",
+    "on-click": "powerprofilesctl set power-saver"
+},
+"battery": {
+    "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+},
+
+"pulseaudio_old": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "on-click": "~/dotfiles/.config/HyprV/waybar/scripts/volume --toggle",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "~/dotfiles/.config/HyprV/waybar/scripts/volume --inc",
+    "on-scroll-down": "~/dotfiles/.config/HyprV/waybar/scripts/volume --dec",
+    "scroll-step": 5,
+    "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
+    }
+},
+
+"pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "on-click": "~/dotfiles/.config/HyprV/waybar/scripts/volume --toggle-mic",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "~/dotfiles/.config/HyprV/waybar/scripts/volume --mic-inc",
+    "on-scroll-down": "~/dotfiles/.config/HyprV/waybar/scripts/volume --mic-dec",
+    "scroll-step": 5
+},
+"hyprland/window": {
+    "format": "{}",
+    "icon":true,
+    "icon-size":35,
+    "rewrite": {
+        "(.*) — Mozilla Firefox": "$1",
+        "(.*) - fish": "> [$1]"
+    },
+    "separate-outputs": true
+}
 }

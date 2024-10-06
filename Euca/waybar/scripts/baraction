@@ -1,25 +1,21 @@
 #!/bin/sh
 . ~/dotfiles/Euca/euca.conf
 
-#Check the version 
-VER=$(readlink -f ~/.config/waybar/config.jsonc | cut -d '-' -f2 | cut -d '.' -f1)
+VER=$(readlink -f ~/dotfiles/Euca/waybar/config.jsonc | cut -d '-' -f2 | cut -d '.' -f1)
+THEMEIS=$(readlink -f ~/dotfiles/Euca/waybar/style.css | rev | cut -d '/' -f1 | rev | cut -d '-' -f1)
+LIGHTIS=$(readlink -f ~/dotfiles/Euca/waybar/style.css | cut -d '-' -f3 | cut -d '.' -f1)
 
-# Check which waybar theme is set
-THEMEIS=$(readlink -f ~/.config/waybar/style.css | cut -d '-' -f3 | cut -d '.' -f1)
-
-#if the theme is not dark then we need to switch to it
-if [[ $THEMEIS == "" ]]; then
+if [[ $LIGHTIS == "" ]]; then
     SWITCHTO="-dark"
     MODESTR="Dark"
 else
     MODESTR="Light"
 fi
 
-#show a message
-notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "switching to $MODESTR"
+#Notification
+notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "Switching to $MODESTR"
 
-#set the waybar theme
-ln -sf ~/dotfiles/Euca/waybar/style/$VER'-style'$SWITCHTO.css ~/.config/waybar/style.css
+ln -sf ~/dotfiles/Euca/themes/$THEMEIS/$THEMEIS'-style'$SWITCHTO.css ~/.config/waybar/style.css
 
 #set the wofi theme
 #ln -sf ~/dotfiles/Euca/wofi/style/$VER'-style'$SWITCHTO.css ~/.config/wofi/style.css
@@ -49,7 +45,7 @@ gsettings set org.gnome.desktop.interface gtk-theme "Adwaita$SWITCHTO"
 
 #change the background image and be cool about it ;)
 if [ -z $SET_BG ]; then
-    swww img ~/dotfiles/Euca/backgrounds/$VER'-background'$SWITCHTO.jpg --transition-fps 60 --transition-type wipe --transition-duration 2
+    swww img ~/dotfiles/Euca/themes/$THEMEIS/background/$THEMEIS$SWITCHTO.jpg --transition-fps 60 --transition-type wipe --transition-duration 2
 else
     swww img $SET_BG --transition-fps 60 --transition-type wipe --transition-duration 2
 fi

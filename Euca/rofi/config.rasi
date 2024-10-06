@@ -14,7 +14,7 @@ configuration {
     selected:       #593527;
     active:         #98C379FF;
     urgent:         #E06C75FF;
-    font: "JetBrainsMono Nerd Font Mono 16";
+    font: "Avenir-Medium 16";
 }
 
 /* MAIN STYLE */

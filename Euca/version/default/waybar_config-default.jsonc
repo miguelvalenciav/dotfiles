@@ -2,7 +2,7 @@
 /*LEFT BAR*/
 {
     "name":"left-bar",
-    "layer":"top",
+    "layer":"botttom",
     "position":"left",
     "width": 50,
     "spacing":10,
@@ -13,10 +13,12 @@
     "modules-center": [
     ],
     "modules-right":[
-        "custom/light_dark",
+        "hyprland/language",
+	"custom/updates",
+	"custom/notification",
         "tray",
         "custom/lock_screen",
-        "custom/updates",
+	"custom/light_dark",
         "custom/power_btn"
     ],
     "include": [
@@ -27,7 +29,7 @@
 /*TOP BAR*/
 {
     "name":"top-bar",
-    "layer": "bottom",
+    "layer": "top",
     "position": "top",
     "height": 50,
     "spacing": 10,
@@ -35,7 +37,11 @@
     /*"exclusive": true,*/
     "passthrough": false,
 /*    "gtk-layer-shell": true,*/
-    
+
+    "on-signal": {
+            "SIGUSR1": "hide",
+            "SIGUSR2": "show"
+    },
 
     /*Modules for top bar*/
     "modules-left": [
@@ -54,7 +60,7 @@
         "battery",
         "backlight",
         "custom/weather",
-        /*"custom/myhyprv",*/
+/*"custom/myhyprv",*/
         "clock"
     ],
 
@@ -65,6 +71,6 @@
         "~/dotfiles/Euca/waybar/modules/default_modules.jsonc",
         "~/dotfiles/Euca/waybar/conf/asus-rog.jsonc",
         "~/dotfiles/Euca/waybar/conf/hypr-util.jsonc"
-    ],
+    ]
 }
 ]

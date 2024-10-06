@@ -13,25 +13,19 @@ window#waybar *.module:hover{
     color:  #615147;
 }
 
-window#waybar.left-bar {
+window#waybar.left-bar,
+window#waybar.top-bar {
     font-size: 25px;
     color:#7C4A31;
 }
 
 window#waybar.left-bar *.module {
     padding: 5px;
-    margin: 5px;
     background-color: rgba(255, 245, 235, 0.6);
-}
-
-window#waybar.top-bar {
-    font-size: 25px;
-    color:#7C4A31;
 }
 
 window#waybar.top-bar *.module {
     padding: 5px;
-    margin: 5px;
     background-color: rgba(255, 245, 235, 0.6);
 }
 

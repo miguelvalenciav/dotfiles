@@ -8,13 +8,21 @@
 alias ls='ls -lpa --color=auto'
 alias grep='grep --color=auto'
 alias nano='nano -l'
+alias virtualbox='QT_SCALE_FACTOR=1.5 VirutalBox'
 #alias rofi_cus='rofi -show drun -config ~/dotfiles/rofi/config.rasi'
 #alias waybar= ''
 PS1='[\u@\h \W]\$ '
 
+
 export OLLAMA_MODELS=/home/inge/Data/Models/Ollama
 export XDG_CURRENT_DESKTOP=Hyprland
 #export CUDA_VISIBLE_DEVICES=0
+export PATH="$HOME/scripts:$PATH"
+export ORIENTDB_HOME=/opt/orientdb
+export PATH=$ORIENTDB_HOME/bin:$PATH
+export EDITOR=nvim
+export VISUAL=nvim
+export PATH="$HOME/bin:$PATH"
 
 eval "$(starship init bash)"
 
