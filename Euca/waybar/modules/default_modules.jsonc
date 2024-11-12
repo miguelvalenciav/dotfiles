@@ -2,7 +2,11 @@
 "custom/koa_exec": {
     //"format": "",
     "format": "🐨",
+<<<<<<< HEAD
     "on-click": "~/koa/dotfiles/scripts/bash/rofi_launch_app",
+=======
+    "on-click": "~/dotfiles/scripts/bash/rofi_launch_app",
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a
     "tooltip": false
 },
 "hyprland/workspaces": {
@@ -53,7 +57,11 @@
 
 "custom/light_dark": {
     "format": "󰐾",
+<<<<<<< HEAD
     "on-click": "~/koa/dotfiles/Euca/waybar/scripts/baraction light",
+=======
+    "on-click": "~/dotfiles/Euca/waybar/scripts/baraction light",
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a
     "tooltip": false
 },
 
@@ -72,8 +80,13 @@
 },
 "custom/updates": {
     "format": "{}",
+<<<<<<< HEAD
     "exec": "~/koa/dotfiles/Euca/waybar/scripts/update-sys",
     "on-click": "~/koa/dotfiles/Euca/waybar/scripts/update-sys update",
+=======
+    "exec": "~/dotfiles/Euca/waybar/scripts/update-sys",
+    "on-click": "~/dotfiles/Euca/waybar/scripts/update-sys update",
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a
     "interval": 600,
     "tooltip": true
 },
@@ -85,8 +98,12 @@
 
 "clock": {
     "format": "{:%Y-%m-%d - %H:%M}",
+<<<<<<< HEAD
     "tooltip-format": "{:%Y-%m-%d}"
     //"tooltip-format": "{: %A, %e %B %Y}"
+=======
+    "tooltip-format": "{: %A, %e %B %Y}"
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a
 },
 
 "custom/weather": {
@@ -94,7 +111,11 @@
     "tooltip" : true,
     "format" : "{}",
     "interval" : 30,
+<<<<<<< HEAD
     "exec" : "~/koa/dotfiles/Euca/waybar/scripts/waybar-wttr-c.py",
+=======
+    "exec" : "~/dotfiles/Euca/waybar/scripts/waybar-wttr-c.py",
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a
     "return-type" : "json"
 },
 "temperature": {
@@ -111,6 +132,7 @@
     "format-muted": "Muted ﱝ",
     "on-click": "pavucontrol"
     },
+<<<<<<< HEAD
 
  "custom/audio_profile": {
         "format": "Profile: {}",
@@ -120,6 +142,8 @@
         "signal" : 1
     },
 
+=======
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a
 "cpu": {
     "interval": 10,
     "format": "  {usage}%",
@@ -152,10 +176,17 @@
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
     "format-icons": ["󰃞", "󰃟", "󰃠"],
+<<<<<<< HEAD
     "on-scroll-up": "~/koa/dotfiles/.config/HyprV/waybar/scripts/brightness --inc",
     "on-scroll-down": "~/koa/dotfiles/.config/HyprV/waybar/scripts/brightness --dec",
     "min-length": 6
 },
+=======
+    "on-scroll-up": "~/dotfiles/.config/HyprV/waybar/scripts/brightness --inc",
+    "on-scroll-down": "~/dotfiles/.config/HyprV/waybar/scripts/brightness --dec",
+    "min-length": 6
+},       
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a
 "power_profiles": {
     "interval": 10,
     "exec": "powerprofilesctl list",
@@ -178,10 +209,17 @@
 "pulseaudio_old": {
     "format": "{icon} {volume}%",
     "format-muted": "",
+<<<<<<< HEAD
     "on-click": "~/koa/dotfiles/.config/HyprV/waybar/scripts/volume --toggle",
     "on-click-right": "pavucontrol",
     "on-scroll-up": "~/koa/dotfiles/.config/HyprV/waybar/scripts/volume --inc",
     "on-scroll-down": "~/koa/dotfiles/.config/HyprV/waybar/scripts/volume --dec",
+=======
+    "on-click": "~/dotfiles/.config/HyprV/waybar/scripts/volume --toggle",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "~/dotfiles/.config/HyprV/waybar/scripts/volume --inc",
+    "on-scroll-down": "~/dotfiles/.config/HyprV/waybar/scripts/volume --dec",
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a
     "scroll-step": 5,
     "format-icons": {
         "headphone": "",
@@ -198,10 +236,17 @@
     "format": "{format_source}",
     "format-source": " {volume}%",
     "format-source-muted": "",
+<<<<<<< HEAD
     "on-click": "~/koa/dotfiles/.config/HyprV/waybar/scripts/volume --toggle-mic",
     "on-click-right": "pavucontrol",
     "on-scroll-up": "~/koa/dotfiles/.config/HyprV/waybar/scripts/volume --mic-inc",
     "on-scroll-down": "~/koa/dotfiles/.config/HyprV/waybar/scripts/volume --mic-dec",
+=======
+    "on-click": "~/dotfiles/.config/HyprV/waybar/scripts/volume --toggle-mic",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "~/dotfiles/.config/HyprV/waybar/scripts/volume --mic-inc",
+    "on-scroll-down": "~/dotfiles/.config/HyprV/waybar/scripts/volume --mic-dec",
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a
     "scroll-step": 5
 },
 "hyprland/window": {

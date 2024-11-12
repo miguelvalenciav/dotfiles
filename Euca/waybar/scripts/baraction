@@ -1,9 +1,17 @@
 #!/bin/sh
+<<<<<<< HEAD
 . ~/koa/dotfiles/Euca/euca.conf
 
 VER=$(readlink -f ~/koa/dotfiles/Euca/waybar/config.jsonc | cut -d '-' -f2 | cut -d '.' -f1)
 THEMEIS=$(readlink -f ~/koa/dotfiles/Euca/waybar/style.css | rev | cut -d '/' -f1 | rev | cut -d '-' -f1)
 LIGHTIS=$(readlink -f ~/koa/dotfiles/Euca/waybar/style.css | cut -d '-' -f3 | cut -d '.' -f1)
+=======
+. ~/dotfiles/Euca/euca.conf
+
+VER=$(readlink -f ~/dotfiles/Euca/waybar/config.jsonc | cut -d '-' -f2 | cut -d '.' -f1)
+THEMEIS=$(readlink -f ~/dotfiles/Euca/waybar/style.css | rev | cut -d '/' -f1 | rev | cut -d '-' -f1)
+LIGHTIS=$(readlink -f ~/dotfiles/Euca/waybar/style.css | cut -d '-' -f3 | cut -d '.' -f1)
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a
 
 if [[ $LIGHTIS == "" ]]; then
     SWITCHTO="-dark"
@@ -15,7 +23,11 @@ fi
 #Notification
 notify-send -h string:x-canonical-private-synchronous:sys-notify -u low "Switching to $MODESTR"
 
+<<<<<<< HEAD
 ln -sf ~/koa/dotfiles/Euca/themes/$THEMEIS/$THEMEIS'-style'$SWITCHTO.css ~/.config/waybar/style.css
+=======
+ln -sf ~/dotfiles/Euca/themes/$THEMEIS/$THEMEIS'-style'$SWITCHTO.css ~/.config/waybar/style.css
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a
 
 #set the wofi theme
 #ln -sf ~/dotfiles/Euca/wofi/style/$VER'-style'$SWITCHTO.css ~/.config/wofi/style.css
@@ -25,16 +37,26 @@ ln -sf ~/koa/dotfiles/Euca/themes/$THEMEIS/$THEMEIS'-style'$SWITCHTO.css ~/.conf
 
 #set the measuring unit
 if [[ $SET_MESU == "I" ]]; then
+<<<<<<< HEAD
     ln -sf ~/koa/dotfiles/Euca/waybar/conf/mesu-imp.jsonc ~/koa/dotfiles/Euca/waybar/conf/mesu.jsonc
 elif [[ $SET_MESU == "M" ]]; then
     ln -sf ~/koa/dotfiles/Euca/waybar/conf/mesu-met.jsonc ~/dotfiles/Euca/waybar/conf/mesu.jsonc
+=======
+    ln -sf ~/dotfiles/Euca/waybar/conf/mesu-imp.jsonc ~/dotfiles/Euca/waybar/conf/mesu.jsonc
+elif [[ $SET_MESU == "M" ]]; then
+    ln -sf ~/dotfiles/Euca/waybar/conf/mesu-met.jsonc ~/dotfiles/Euca/waybar/conf/mesu.jsonc
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a
 fi
 
 #set the xfce and GTK theme
 if [ $VER == "v4" ]; then
     xfconf-query -c xsettings -p /Net/IconThemeName -s "Papirus-Dark"
     gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
+<<<<<<< HEAD
 else
+=======
+else 
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a
     xfconf-query -c xsettings -p /Net/IconThemeName -s "Adwaita$SWITCHTO"
     gsettings set org.gnome.desktop.interface icon-theme "Adwaita$SWITCHTO"
 fi
@@ -45,7 +67,11 @@ gsettings set org.gnome.desktop.interface gtk-theme "Adwaita$SWITCHTO"
 
 #change the background image and be cool about it ;)
 if [ -z $SET_BG ]; then
+<<<<<<< HEAD
     swww img ~/koa/dotfiles/Euca/themes/$THEMEIS/background/$THEMEIS$SWITCHTO.jpg --transition-fps 60 --transition-type wipe --transition-duration 2
+=======
+    swww img ~/dotfiles/Euca/themes/$THEMEIS/background/$THEMEIS$SWITCHTO.jpg --transition-fps 60 --transition-type wipe --transition-duration 2
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a
 else
     swww img $SET_BG --transition-fps 60 --transition-type wipe --transition-duration 2
 fi
@@ -62,3 +88,10 @@ mako &
 #killall -SIGUSR2 waybar <-- start causing web brwsers to close so switched to below...
 pkill waybar
 waybar &
+<<<<<<< HEAD
+=======
+
+if [[ $VER == "v4" ]]; then
+    waybar --config ~/.config/HyprV/waybar/conf/v4-config-bottom.jsonc
+fi
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a

@@ -20,8 +20,13 @@
         "custom/power_btn"
     ],
     "include": [
+<<<<<<< HEAD
         "~/koa/dotfiles/Euca/waybar/modules/default_modules.jsonc",
         "~/koa/dotfiles/Euca/waybar/conf/asus-rog.jsonc"
+=======
+        "~/dotfiles/Euca/waybar/modules/default_modules.jsonc",
+        "~/dotfiles/Euca/waybar/conf/asus-rog.jsonc"
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a
     ]
 },
 /*TOP BAR*/
@@ -62,9 +67,16 @@
 /*SE PUEDEN HACER SCRIPTS GENERALES Y PONERLOS ACA CON UN INCLUDE*/
 
     "include": [
+<<<<<<< HEAD
         "~/koa/dotfiles/Euca/waybar/modules/default_modules.jsonc",
         "~/koa/dotfiles/Euca/waybar/conf/asus-rog.jsonc",
         "~/koa/dotfiles/Euca/waybar/conf/hypr-util.jsonc"
     ]
+=======
+        "~/dotfiles/Euca/waybar/modules/default_modules.jsonc",
+        "~/dotfiles/Euca/waybar/conf/asus-rog.jsonc",
+        "~/dotfiles/Euca/waybar/conf/hypr-util.jsonc"
+    ],
+>>>>>>> e7ddedd2685b9344c208a2ccb90c44afd53bf63a
 }
 ]
