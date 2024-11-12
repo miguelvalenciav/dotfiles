@@ -1,0 +1,3 @@
+#!/bin/bash
+    rofi -config ~/koa/dotfiles/Euca/rofi/config.rasi -show drun
+    ;;

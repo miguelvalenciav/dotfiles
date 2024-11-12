@@ -1,0 +1,6 @@
+#!/bin/bash
+kill -f waybar
+# Asegurarse de que los procesos relacionados se cierren completamente
+sleep 1
+# Volver a iniciar Waybar
+waybar &

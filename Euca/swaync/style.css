@@ -1,0 +1,136 @@
+
+
+/* Color Palette */
+@define-color dark-brown #7C4A31;
+@define-color light-beige #F5E6DA;
+
+
+
+/* Paleta de Colores 
+  --color-marron-medio: #B15638;
+  --color-beige-claro: #F5E6DA;
+  --color-beige-medio: #D4C4B6;
+  --color-verde-oscuro: #3D6B48;
+  --color-verde-claro: #A3B99D;
+  --color-gris-oscuro: #2E3B46;
+  --color-gris-marron: #615147;
+  --color-acento: #615FC8;
+*/
+/* Estilos Generales */
+body {
+  background-color: #F5E6DA;
+  color: #A3B99D;
+  font-family: 'Avenir-Medium';
+  margin: 0;
+  padding: 0;
+}
+
+/* Enlaces */
+a {
+  color: #615FC8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Encabezados */
+h1, h2, h3, h4, h5, h6 {
+  color: @dark-brown;
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* Botones */
+button {
+  background-color: #F5E6DA;
+  color: #7C4A31;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #837FF1;
+}
+
+/* Tarjetas o Paneles */
+.card {
+  background-color: #615;
+  border: 1px solid #B15638;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+/* Notificaciones (para swaync) */
+.notification {
+  background-color: #615FC8;
+  border: 5px solid #837FF1;
+  padding: 15px;
+  margin: 10px;
+  color: #2E3B46;
+}
+
+
+.notification-title {
+  font-weight: bold;
+  color: #7C4A31;
+  margin-bottom: 5px;
+}
+
+.notification-message {
+  color: #615147;
+}
+
+/* Footer */
+footer {
+  background-color: #B15638;
+  color: #F5E6DA;
+  padding: 20px;
+}
+
+/* Componentes adicionales */
+.navbar {
+  background-color: #3D6B48;
+  padding: 10px;
+}
+
+.navbar a {
+  color: #F5E6DA;
+  margin: 0 10px;
+}
+
+.sidebar {
+  background-color: #2E3B46;
+  color: #F5E6DA;
+}
+
+.sidebar a {
+  color: #F5E6DA;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #615147;
+}
+
+.low {
+  padding: 0px;
+  border-radius: 10px;
+}
+
+.normal {
+  padding: 0px;
+  border-radius: 10px;
+}
+
+.critical {
+  background: #C02;
+  padding: 0px;
+  border-radius: 10px;
+  border: 5px solid #C09;
+}
+

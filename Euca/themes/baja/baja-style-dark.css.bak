@@ -1,0 +1,130 @@
+* {
+    border: none;
+    border-radius: 10px;
+    font-family: "Avenir-Medium";
+    font-weight: normal;
+}
+
+window#waybar{
+    background: transparent;
+}
+
+window#waybar *.module:hover{
+    color:  #615147;
+}
+
+window#waybar.left-bar {
+    font-size: 25px;
+    color:#7C4A31;
+}
+
+window#waybar.left-bar *.module {
+    padding: 5px;
+    background-color: rgba(255, 245, 235, 0.6);
+}
+
+window#waybar.top-bar {
+    font-size: 25px;
+    color:#7C4A31;
+}
+
+window#waybar.top-bar *.module {
+    padding: 5px;
+    background-color: rgba(255, 245, 235, 0.6);
+}
+
+#workspaces button {
+    color:#7C4A31;
+    font-weight: bold;
+}
+
+#workspaces button.active {
+    color: #F5E6DA;
+    background: #615147;
+    border-radius: 5px;
+}
+
+#workspaces button:hover {
+    background: #B15638;
+    color: #F5E6DA;
+    border-radius: 5px;
+}
+
+/*#custom-koa_exec,*/
+/*#custom-lock_screen,
+#custom-light_dark,
+#custom-power_btn,
+#custom-power_profile,
+#custom-weather,
+#custom-myhyprv,
+#custom-performance,
+#window,
+#cpu,
+#disk,
+#custom-updates,
+#memory,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#tray,
+#temperature,
+#workspaces,
+#backlight {
+    background-color: rgba(255, 245, 235, 0.6);
+    border: 0px;
+    color:#7C4A31;
+
+
+}
+*/
+#temperature.critical {
+    color: #e92d4d;
+}
+
+#workspaces {
+    padding-right: 0px;
+}
+#window {
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#custom-launch_firefox, 
+#custom-launch_thunderbird,
+#custom-launch_thunar,
+#custom-launch_kitty,
+#custom-weather {
+    margin-left: 0px;
+    border-right: 0px;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+#custom-launch_rofi {
+    font-size: 25px;
+}
+
+#custom-launch_firefox, 
+#custom-launch_kitty {
+    font-size: 20px;
+}
+
+tooltip {
+    background: #F5E6DA;
+    opacity: 1;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #34344b;
+    color:#7C4A31;
+}
+
+tooltip label{
+    color: #7C4A31;
+}
+
+#custom-notification {
+  font-family: "NotoSansMono Nerd Font";
+}

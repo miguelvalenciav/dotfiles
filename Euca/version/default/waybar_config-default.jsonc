@@ -1,0 +1,74 @@
+[
+/*LEFT BAR*/
+{
+    "name":"left-bar",
+    "layer":"botttom",
+    "position":"left",
+    "width": 50,
+    "spacing":10,
+    "modules-left": [
+        "custom/koa_exec",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+    ],
+    "modules-right":[
+        "hyprland/language",
+	"custom/updates",
+	"custom/notification",
+        "tray",
+        "custom/lock_screen",
+	"custom/light_dark",
+        "custom/power_btn"
+    ],
+    "include": [
+        "~/koa/dotfiles/Euca/waybar/modules/default_modules.jsonc"
+    ]
+},
+/*TOP BAR*/
+{
+    "name":"top-bar",
+    "layer": "top",
+    "position": "top",
+    "height": 50,
+    "spacing": 10,
+    "mod": "dock",
+    /*"exclusive": true,*/
+    "passthrough": false,
+/*    "gtk-layer-shell": true,*/
+
+    "on-signal": {
+            "SIGUSR1": "hide",
+            "SIGUSR2": "show"
+    },
+
+    /*Modules for top bar*/
+    "modules-left": [
+        "cpu",
+        "memory",
+        "disk"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "custom/audio_profile",
+        /*"power_profiles",*/
+        "temperature",
+        /*"custom/power_profile",*/
+        "battery",
+        "backlight",
+        "custom/weather",
+/*"custom/myhyprv",*/
+        "clock"
+    ],
+
+
+/*SE PUEDEN HACER SCRIPTS GENERALES Y PONERLOS ACA CON UN INCLUDE*/
+
+    "include": [
+        "~/koa/dotfiles/Euca/waybar/modules/default_modules.jsonc",
+    ]
+}
+]

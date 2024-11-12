@@ -1,0 +1,3 @@
+#!/bin/bash
+date_string=$(date + "%Y%m%d%H%M%S")
+qmk_cli_command_to_update_display_time $date_string

@@ -1,0 +1,120 @@
+{
+
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "positionX": "left",
+  "positionY": "top",
+  "layer": "overlay",
+  "control-center-layer": "top",
+  "layer-shell": true,
+  "cssPriority": "application",
+  "control-center-margin-top": 0,
+  "control-center-margin-bottom": 50,
+  "control-center-margin-right": 0,
+  "control-center-margin-left": 0,
+  "notification-2fa-action": true,
+  "notification-inline-replies": true,
+  "notification-icon-size": 64,
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  "timeout": 6,
+  "timeout-low": 4,
+  "timeout-critical": 0,
+  "fit-to-screen": true,
+  "relative-timestamps": true,
+  "control-center-width": 500,
+  "control-center-height": 800,
+  "notification-window-width": 500,
+  "keyboard-shortcuts": true,
+  "image-visibility": "when-available",
+  "transition-time": 200,
+  "hide-on-clear": false,
+  "hide-on-action": true,
+  "widgets": [
+    "label",
+      "dnd",
+    "buttons-grid",
+    "mpris",
+    "volume",
+    /*"backlight",*/
+    "inhibitors",
+    "title",
+    "notifications"
+  ],
+  "script-fail-notify": true,
+  "scripts": {
+    "example-script": {
+      "exec": "echo 'Do something...'",
+      "urgency": "Normal"
+    },
+    "example-action-script": {
+      "exec": "echo 'Do something actionable!'",
+      "urgency": "Normal",
+      "run-on": "action"
+    }
+  },
+  "notification-visibility": {
+    "example-name": {
+      "state": "muted",
+      "urgency": "Low",
+      "app-name": "Spotify"
+    }
+  },
+  "widget-config": {
+    "inhibitors": {
+      "text": "Inhibitors",
+      "button-text": "Clear All",
+      "clear-all-button": true
+    },
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Clear All"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "label": {
+      "max-lines": 5,
+      "text": "Koa Center"
+    },
+    "mpris": {
+      "image-size": 96,
+      "image-radius": 12
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "ᯤ",
+          "type": "toggle",
+          "active": true,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
+          "update_command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
+        },
+        {
+                    "label": "󰐥",
+                    "command": "bash -c $HOME/.config/hypr/scripts/Wlogout.sh"
+                },
+                {
+                    "label": "󰌾",
+                    "command": "bash -c $HOME/.config/hypr/scripts/LockScreen.sh"
+                },
+                {
+                    "label": "󰍃",
+                    "command": "hyprctl dispatch exit"
+                },
+                {
+                    "label": "󰀝",
+                    "command": "bash -c $HOME/.config/hypr/scripts/AirplaneMode.sh"
+                },
+                {
+                    "label": "󰝟",
+                    "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+                },
+                {
+                    "label": "󰂯",
+                    "command": "blueman-manager"
+                }
+      ]
+    }
+  }
+}

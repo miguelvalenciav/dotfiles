@@ -1,0 +1,70 @@
+[
+/*LEFT BAR*/
+{
+    "name":"left-bar",
+    "layer":"top",
+    "position":"left",
+    "width": 50,
+    "spacing":10,
+    "modules-left": [
+        "custom/koa_exec",  
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+    ],
+    "modules-right":[
+        "custom/light_dark",
+        "tray",
+        "custom/lock_screen",
+        "custom/updates",
+        "custom/power_btn"
+    ],
+    "include": [
+        "~/koa/dotfiles/Euca/waybar/modules/default_modules.jsonc",
+        "~/koa/dotfiles/Euca/waybar/conf/asus-rog.jsonc"
+    ]
+},
+/*TOP BAR*/
+{
+    "name":"top-bar",
+    "layer": "bottom",
+    "position": "top",
+    "height": 50,
+    "spacing": 10,
+    "mod": "dock",
+    /*"exclusive": true,*/
+    "passthrough": false,
+/*    "gtk-layer-shell": true,*/
+    
+
+    /*Modules for top bar*/
+    "modules-left": [
+        "cpu",
+        "memory",
+        "disk"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        /*"power_profiles",*/
+        "temperature",
+        /*"custom/power_profile",*/
+        "battery",
+        "backlight",
+        "custom/weather",
+        /*"custom/myhyprv",*/
+        "clock"
+    ],
+
+
+/*SE PUEDEN HACER SCRIPTS GENERALES Y PONERLOS ACA CON UN INCLUDE*/
+
+    "include": [
+        "~/koa/dotfiles/Euca/waybar/modules/default_modules.jsonc",
+        "~/koa/dotfiles/Euca/waybar/conf/asus-rog.jsonc",
+        "~/koa/dotfiles/Euca/waybar/conf/hypr-util.jsonc"
+    ]
+}
+]
